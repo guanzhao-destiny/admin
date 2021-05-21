@@ -153,8 +153,7 @@ function setPath(routers) {
 }
 
 function beforeRouterGo(to, next) {
-  debugger
-  axios.get('/get_menu')
+  axios.get('http://106.52.60.167:8080/admin/get_menu')
   .then(res => {
     console.log(true, res);
     setPath(res.data.data);
